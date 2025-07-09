@@ -1,0 +1,350 @@
+19- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p19 19_ODS_表格管理设置.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=19
+02- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p02 02-核心架构.f30077.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=2
+05- 【尚硅谷】Jenkins教程（从配置到实战） p05 05-GitLab介绍及安装准备.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=5
+07- 英语时态：动词的【时、体、貌】【中】.f30280.m4a - https://www.bilibili.com/video/BV1wz4y1w7AY
+19- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.2 名词性从句].f30280.m4a - https://www.bilibili.com/video/BV1Q94y1W7S7
+16- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p16 16-基础使用-工作流定义.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=16
+61- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p61 61_模拟调度场景演示.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=61
+03- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p03 03_数据仓库基本概念.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=3
+07- 【尚硅谷】Jenkins教程（从配置到实战） p07 07-Docker下安装GitLab.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=7
+30- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p30 30_DWD_下单明细表模型创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=30
+23- 【半个月，搭建你的英语语法体系】第二章 理解了简单句，你就理解了一切 [2.1 主谓宾定状补].f30280.m4a - https://www.bilibili.com/video/BV1rF411S7qd
+15- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.6 形容词性从句（下）].f100143.mp4 - https://www.bilibili.com/video/BV1594y1p7AG
+43- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p43 43_DWS_会员粒度最近1日支付模型表格创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=43
+22- 【尚硅谷】Jenkins教程（从配置到实战） p22 22-Docker jar文件打包到镜像中.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=22
+30- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p30 30_DWD_下单明细表模型创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=30
+19- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p19 19-工作流传参-本地参数&全局参数.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=19
+09- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p09 09-部署-初始化数据库.f100026.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=9
+61- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p61 61_模拟调度场景演示.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=61
+15- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p15 15-基础使用-项目管理.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=15
+14- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.7 副词性从句].f100143.mp4 - https://www.bilibili.com/video/BV1zH4y1m7zp
+01- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p01 01_阿里云生态离线数仓课程简介.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=1
+08- 【尚硅谷】Jenkins教程（从配置到实战） p08 08-GitLab在客户端提交代码.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=8
+02- 虚拟语气（2）.f30280.m4a - https://www.bilibili.com/video/BV1dm411R7uG
+07- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p07 07_dataWorks购买及创建工作空间.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=7
+34- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p34 34_DWD_下单明细表数据每日装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=34
+67- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p67 67_可视化_QuickBI数据门户功能介绍.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=67
+02- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p02 02_阿里云数仓课程目标介绍.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=2
+62- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p62 62_添加数据导出到RDS.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=62
+13- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p13 13_RDS模拟业务数据生成.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=13
+67- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p67 67_可视化_QuickBI数据门户功能介绍.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=67
+10- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p10 10_airflow调度应用方法介绍.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=10
+18- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p18 18_ODS_离线增量表使用DataWorks批量一次性同步功能.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=18
+06- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p06 06_dataWorks和MaxCompute简单介绍.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=6
+14- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.7 副词性从句].f30280.m4a - https://www.bilibili.com/video/BV1zH4y1m7zp
+17- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p17 17-基础使用-运行工作流.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=17
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f30280.m4a - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387.favlist.content.click
+27- 【尚硅谷】Jenkins教程（从配置到实战） p27 27-使用pipeline自动打包Docker镜像.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=27
+21- 【尚硅谷】Jenkins教程（从配置到实战） p21 21-容器化构建的几种方式.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=21
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f30280.m4a - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387.0.0
+26- 【尚硅谷】Jenkins教程（从配置到实战） p26 26-Blue Ocean UI与pipeline基础语法.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=26
+27- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p27 27_DIM_用户维度拉链表每日装载数据合并.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=27
+69- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p69 69_协同工作_quickBI的协同工作设置.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=69
+66- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p66 66_可视化_新增首单用户统计折线图添加.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=66
+01- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p01 01-课程简介.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=1
+48- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p48 48_DWS_会员粒度最近1日下单表数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=48
+13- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p13 13_airflow监控页面展示.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=13
+10- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p10 10_数仓建模规划分层规则定义.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=10
+19- 【尚硅谷】Jenkins教程（从配置到实战） p19 19-Poll SCM触发构建.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=19
+42- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p42 42_DWS_会员粒度最近1日下单模型表格创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=42
+04- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p04 04-部署-软硬件环境要求.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=4
+37- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p37 37_DWD_交易流程累积快照事实表首日装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=37
+70- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p70 70_阿里云离线数仓总结.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=70
+06- 英语时态：动词的【时、体、貌】【下】.f30280.m4a - https://www.bilibili.com/video/BV1RC4y1P72K
+45- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p45 45_DWS_下单到支付时间间隔平均值模型表格创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=45
+20- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p20 20_ODS_增量表的实时同步.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=20
+39- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p39 39_DWD_完成表格关联maxCompute.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=39
+64- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p64 64_可视化_使用可视化工具QuickBi连接数据源.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=64
+08- 英语时态：动词的【时、体、貌】【上】.f100143.mp4 - https://www.bilibili.com/video/BV1Ku4y1j7nv
+07- 【尚硅谷】Jenkins教程（从配置到实战） p07 07-Docker下安装GitLab.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=7
+21- 【尚硅谷】Jenkins教程（从配置到实战） p21 21-容器化构建的几种方式.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=21
+08- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p08 08_数据仓库原始业务表格介绍.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=8
+13- 【尚硅谷】Jenkins教程（从配置到实战） p13 13-Pre Steps执行构建前执行目标服务器脚本.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=13
+55- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p55 55_ADS_首单用户统计模型创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=55
+07- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p07 07-部署-创建元数据库.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=7
+02- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p02 02-核心架构.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=2
+31- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p31 31_DWD_支付明细表模型创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=31
+01- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p01 01_阿里云生态离线数仓课程简介.f100110.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=1
+62- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p62 62_添加数据导出到RDS.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=62
+22- 【尚硅谷】Jenkins教程（从配置到实战） p22 22-Docker jar文件打包到镜像中.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=22
+01- 【尚硅谷】Jenkins教程（从配置到实战） p01 01-Jenkins教程简介.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=1
+03- 虚拟语气（1）.f30280.m4a - https://www.bilibili.com/video/BV1X2421N7L1
+14- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p14 14_DataStudio控制台设置.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=14
+03- 虚拟语气（1）.f100027.mp4 - https://www.bilibili.com/video/BV1X2421N7L1
+24- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p24 24_DIM商品维度表同步任务实现.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=24
+28- 【尚硅谷】Jenkins教程（从配置到实战） p28 28-使用Jenkins file创建多分支Job.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=28
+28- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p28 28_DIM_用户维度拉链表每日数据导入.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=28
+11- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.3 分词].f30280.m4a - https://www.bilibili.com/video/BV1Yw41117Xf
+35- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p35 35_DWD_支付成功明细表数据首日装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=35
+01- 虚拟语气（3）.f30280.m4a - https://www.bilibili.com/video/BV12K421a7Bb
+22- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p22 22-工作流传参-内置参数.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=22
+08- 英语时态：动词的【时、体、貌】【上】.f30280.m4a - https://www.bilibili.com/video/BV1Ku4y1j7nv
+55- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p55 55_ADS_首单用户统计模型创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=55
+21- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p21 21-工作流传参-参数优先级.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=21
+23- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p23 23-工作流传参-资源中心.f100026.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=23
+20- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.1 简单句+简单句，必须有连词].f30280.m4a - https://www.bilibili.com/video/BV1Jp4y1A7D2
+15- 【尚硅谷】Jenkins教程（从配置到实战） p15 15-代码提交测试.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=15
+06- 英语时态：动词的【时、体、貌】【下】.f100143.mp4 - https://www.bilibili.com/video/BV1RC4y1P72K
+53- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p53 53_DWS_用户粒度历史至今数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=53
+14- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p14 14-基础使用-安全中心(下).f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=14
+14- 【尚硅谷】Jenkins教程（从配置到实战） p14 14-构建前置清理脚本开发.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=14
+12- 【尚硅谷】Jenkins教程（从配置到实战） p12 12-SSH publishers超时机制.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=12
+31- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p31 31_DWD_支付明细表模型创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=31
+19- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.2 名词性从句].f100143.mp4 - https://www.bilibili.com/video/BV1Q94y1W7S7
+04- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p04 04_数据仓库需求分析和框架选择.f100110.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=4
+40- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p40 40_DWS_指标模型构建原子指标添加.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=40
+04- 英语语法回炉指南【Larry's 语法课の前传】.f30280.m4a - https://www.bilibili.com/video/BV13v4y147P4
+04- 英语语法回炉指南【Larry's 语法课の前传】.f30077.mp4 - https://www.bilibili.com/video/BV13v4y147P4
+26- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p26 26_DIM_用户维度拉链表首日初始化装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=26
+28- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p28 28_DIM_用户维度拉链表每日数据导入.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=28
+05- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p05 05-部署-集群规划.f100026.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=5
+08- 【尚硅谷】Jenkins教程（从配置到实战） p08 08-GitLab在客户端提交代码.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=8
+08- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p08 08-部署-配置一键部署脚本.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=8
+02- 【尚硅谷】Jenkins教程（从配置到实战） p02 02-Jenkins在开发中所处的位置和作用.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=2
+11- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p11 11-部署-总结.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=11
+53- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p53 53_DWS_用户粒度历史至今数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=53
+25- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p25 25_DIM_省份维度表同步任务实现.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=25
+58- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p58 58_ADS_省份聚合数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=58
+01- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p01 01_Airflow课程介绍.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=1
+15- 【尚硅谷】Jenkins教程（从配置到实战） p15 15-代码提交测试.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=15
+64- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p64 64_可视化_使用可视化工具QuickBi连接数据源.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=64
+05- 英语时态详解.f30280.m4a - https://www.bilibili.com/video/BV1iJ4m1p78e
+29- 【尚硅谷】Jenkins教程（从配置到实战） p29 29-总结.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=29
+10- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p10 10-部署-一键部署.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=10
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.2 词性之间的修饰关系].f100143.mp4 - https://www.bilibili.com/video/BV1PG411R75a?spm_id_from=333.788.videopod.sections&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca
+11- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p11 11-部署-总结.f30077.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=11
+14- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p14 14_airflow框架总结.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=14
+24- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p24 24_DIM商品维度表同步任务实现.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=24
+66- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p66 66_可视化_新增首单用户统计折线图添加.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=66
+24- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p24 24-告警通知-准备邮箱.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=24
+05- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p05 05-部署-集群规划.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=5
+15- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p15 15_ODS_sku商品表离线全量同步.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=15
+42- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p42 42_DWS_会员粒度最近1日下单模型表格创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=42
+25- 【尚硅谷】Jenkins教程（从配置到实战） p25 25-Jenkins集群配置并发构建.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=25
+47- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p47 47_DWS_会员粒度历史至今下单统计模型表格创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=47
+02- 【尚硅谷】Jenkins教程（从配置到实战） p02 02-Jenkins在开发中所处的位置和作用.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=2
+22- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p22 22_DIM_商品维度表建模创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=22
+27- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p27 27-工作流失败重跑.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=27
+14- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p14 14-基础使用-安全中心(下).f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=14
+04- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p04 04_数据仓库需求分析和框架选择.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=4
+16- 【尚硅谷】Jenkins教程（从配置到实战） p16 16-GitLab钩子自动构建项目.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=16
+11- 【尚硅谷】Jenkins教程（从配置到实战） p11 11-自动化发布到测试服务器并自动运行.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=11
+15- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p15 15_ODS_sku商品表离线全量同步.f30077.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=15
+46- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p46 46_DWS_省份粒度最近n日下单模型表格创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=46
+09- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p09 09_修改本地执行器多线程调度.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=9
+24- 【尚硅谷】Jenkins教程（从配置到实战） p24 24-自动化部署构建Docker镜像运行jar.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=24
+43- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p43 43_DWS_会员粒度最近1日支付模型表格创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=43
+41- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p41 41_DWS_派生指标的模型构建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=41
+07- 英语时态：动词的【时、体、貌】【中】.f100143.mp4 - https://www.bilibili.com/video/BV1wz4y1w7AY
+23- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p23 23-工作流传参-资源中心.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=23
+68- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p68 68_协同工作_ARM账号创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=68
+54- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p54 54_DWS_完成表格关联到MaxCompute.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=54
+34- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p34 34_DWD_下单明细表数据每日装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=34
+63- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p63 63_可视化_DataWorks初步可视化展示.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=63
+65- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p65 65_可视化_各省份下单热力地图可视化展示.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=65
+12- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.2 动名词].f30280.m4a - https://www.bilibili.com/video/BV1y94y1a7cr
+02- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p02 02_Airflow的基本概述.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=2
+68- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p68 68_协同工作_ARM账号创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=68
+17- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p17 17_ODS_离线增量表order_info首次初始化同步.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=17
+13- 【尚硅谷】Jenkins教程（从配置到实战） p13 13-Pre Steps执行构建前执行目标服务器脚本.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=13
+04- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p04 04_数据仓库需求分析和框架选择.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=4
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f100143.mp4 - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387.0.0
+05- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p05 05_数据仓库流程设计和数仓分层.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=5
+50- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p50 50_DWS_省份粒度最近1日下单表数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=50
+21- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p21 21_ODS_MaxCompute管理业务表格.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=21
+38- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p38 38_DWD_交易流程累积快照事实表每日装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=38
+22- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p22 22_DIM_商品维度表建模创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=22
+04- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p04 04-部署-软硬件环境要求.f100026.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=4
+27- 【尚硅谷】Jenkins教程（从配置到实战） p27 27-使用pipeline自动打包Docker镜像.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=27
+09- 【尚硅谷】Jenkins教程（从配置到实战） p09 09-Jenkins安装.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=9
+05- 【尚硅谷】Jenkins教程（从配置到实战） p05 05-GitLab介绍及安装准备.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=5
+05- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p05 05_数据仓库流程设计和数仓分层.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=5
+48- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p48 48_DWS_会员粒度最近1日下单表数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=48
+18- 【尚硅谷】Jenkins教程（从配置到实战） p18 18-定时执行任务Jenkins cron表达式.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=18
+09- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p09 09_修改本地执行器多线程调度.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=9
+07- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p07 07_dataWorks购买及创建工作空间.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=7
+21- 【半个月，搭建你的英语语法体系】第二章 理解了简单句，你就理解了一切 [2.2 简单句的构成 + 2.3 语法分析实践（第一弹）].f30280.m4a - https://www.bilibili.com/video/BV1tp4y1j7BE
+14- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p14 14_airflow框架总结.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=14
+11- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p11 11_数仓建模数据域分层介绍.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=11
+58- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p58 58_ADS_省份聚合数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=58
+41- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p41 41_DWS_派生指标的模型构建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=41
+26- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f100143.mp4 - https://www.bilibili.com/video/BV1jF411r73p
+32- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p32 32_DWD_交易流程累积快照事实表模型创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=32
+23- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p23 23_DIM_用户维度表和省份维度表模型创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=23
+40- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p40 40_DWS_指标模型构建原子指标添加.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=40
+10- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.4 从句和非谓语动词的转换].f100143.mp4 - https://www.bilibili.com/video/BV14p4y1c72s
+33- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p33 33_DWD_下单明细表数据首日装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=33
+03- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p03 03_数据仓库基本概念.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=3
+03- 【尚硅谷】Jenkins教程（从配置到实战） p03 03-Jenkins+Maven+Git持续集成基础使用.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=3
+19- 【尚硅谷】Jenkins教程（从配置到实战） p19 19-Poll SCM触发构建.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=19
+11- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p11 11_数仓建模数据域分层介绍.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=11
+46- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p46 46_DWS_省份粒度最近n日下单模型表格创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=46
+12- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.2 动名词].f100143.mp4 - https://www.bilibili.com/video/BV1y94y1a7cr
+10- 【尚硅谷】Jenkins教程（从配置到实战） p10 10-Jenkins配置Maven+Git自动构建jar包.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=10
+25- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.2 词性之间的修饰关系].f100143.mp4 - https://www.bilibili.com/video/BV1PG411R75a
+26- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p26 26-告警通知-测试.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=26
+17- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.4 形容词性从句（上）].f30280.m4a - https://www.bilibili.com/video/BV1AN411H7ag
+10- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p10 10-部署-一键部署.f100026.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=10
+16- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.5 形容词性从句（中）].f30280.m4a - https://www.bilibili.com/video/BV1534y1N7Zd
+07- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p07 07_编写airflow启动停止的脚本.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=7
+02- 虚拟语气（2）.f100027.mp4 - https://www.bilibili.com/video/BV1dm411R7uG
+11- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p11 11_airflow删除DAG任务.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=11
+59- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p59 59_ADS_完成表格关联到MaxCompute.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=59
+29- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p29 29_DIM_维度表主题划分和表格关联.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=29
+08- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p08 08_修改mysql作为底层数据库.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=8
+09- Larry的语法系列课程，你该怎么学？.f100027.mp4 - https://www.bilibili.com/video/BV1D1421m7o6
+13- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p13 13_RDS模拟业务数据生成.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=13
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f100143.mp4 - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387.0.0&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca
+22- 【半个月，搭建你的英语语法体系】第二章 理解了简单句，你就理解了一切 [2.1.1 补语详解].f30280.m4a - https://www.bilibili.com/video/BV1Qw411U72K
+03- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p03 03_数据仓库基本概念.f100110.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=3
+35- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p35 35_DWD_支付成功明细表数据首日装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=35
+27- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p27 27-工作流失败重跑.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=27
+38- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p38 38_DWD_交易流程累积快照事实表每日装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=38
+36- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p36 36_DWD_支付成功明细表数据每日装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=36
+65- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p65 65_可视化_各省份下单热力地图可视化展示.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=65
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f100143.mp4 - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387
+28- 【尚硅谷】Jenkins教程（从配置到实战） p28 28-使用Jenkins file创建多分支Job.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=28
+18- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.3 名词性从句（补充）].f30280.m4a - https://www.bilibili.com/video/BV1dh4y1w7e9
+03- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p03 03-部署-部署模式说明.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=3
+49- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p49 49_DWS_会员粒度最近1日支付表数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=49
+12- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p12 12_数仓建模添加业务过程.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=12
+07- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p07 07-部署-创建元数据库.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=7
+08- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p08 08-部署-配置一键部署脚本.f30077.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=8
+04- 【尚硅谷】Jenkins教程（从配置到实战） p04 04-安装硬件环境和知识储备.f100026.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=4
+09- Larry的语法系列课程，你该怎么学？.f30280.m4a - https://www.bilibili.com/video/BV1D1421m7o6
+60- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p60 60_添加开发节点的依赖关系并提交节点.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=60
+51- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p51 51_DWS_下单到支付时间间隔平均值最近1日表格数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=51
+03- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p03 03_Airflow的使用特点.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=3
+24- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.3 介词 = 形容词 or 副词].f100113.mp4 - https://www.bilibili.com/video/BV17u4y1k76A
+16- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.5 形容词性从句（中）].f100143.mp4 - https://www.bilibili.com/video/BV1534y1N7Zd
+52- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p52 52_DWS_省份粒度最近n天汇总数据装载.f100143.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=52
+10- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.4 从句和非谓语动词的转换].f30280.m4a - https://www.bilibili.com/video/BV14p4y1c72s
+18- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.3 名词性从句（补充）].f100143.mp4 - https://www.bilibili.com/video/BV1dh4y1w7e9
+25- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p25 25-告警通知-告警组&告警实例配置.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=25
+13- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p13 13_airflow监控页面展示.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=13
+09- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p09 09_业务表格同步策略介绍.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=9
+63- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p63 63_可视化_DataWorks初步可视化展示.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=63
+56- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p56 56_ADS_省份聚合模型创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=56
+16- 【尚硅谷】Jenkins教程（从配置到实战） p16 16-GitLab钩子自动构建项目.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=16
+32- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p32 32_DWD_交易流程累积快照事实表模型创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=32
+02- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p02 02_Airflow的基本概述.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=2
+01- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p01 01_Airflow课程介绍.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=1
+04- 【尚硅谷】Jenkins教程（从配置到实战） p04 04-安装硬件环境和知识储备.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=4
+18- 【尚硅谷】Jenkins教程（从配置到实战） p18 18-定时执行任务Jenkins cron表达式.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=18
+10- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p10 10_airflow调度应用方法介绍.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=10
+12- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p12 12-基础使用-概述.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=12
+09- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p09 09_业务表格同步策略介绍.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=9
+27- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p27 27_DIM_用户维度拉链表每日装载数据合并.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=27
+24- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.3 介词 = 形容词 or 副词].f30280.m4a - https://www.bilibili.com/video/BV17u4y1k76A
+25- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.2 词性之间的修饰关系].f30280.m4a - https://www.bilibili.com/video/BV1PG411R75a
+19- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p19 19-工作流传参-本地参数&全局参数.f30077.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=19
+26- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p26 26-告警通知-测试.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=26
+23- 【尚硅谷】Jenkins教程（从配置到实战） p23 23-使用外部jar包完成自动化部署.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=23
+20- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p20 20-工作流传参-上下游传参.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=20
+24- 【尚硅谷】Jenkins教程（从配置到实战） p24 24-自动化部署构建Docker镜像运行jar.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=24
+23- 【尚硅谷】Jenkins教程（从配置到实战） p23 23-使用外部jar包完成自动化部署.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=23
+13- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.1 不定式].f30280.m4a - https://www.bilibili.com/video/BV18u4y147dV
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f100143.mp4 - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387.favlist.content.click
+06- 【尚硅谷】Jenkins教程（从配置到实战） p06 06-GitLab在SSH下安装.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=6
+16- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p16 16-基础使用-工作流定义.f30077.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=16
+23- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p23 23_DIM_用户维度表和省份维度表模型创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=23
+20- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.1 简单句+简单句，必须有连词].f100143.mp4 - https://www.bilibili.com/video/BV1Jp4y1A7D2
+17- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p17 17_ODS_离线增量表order_info首次初始化同步.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=17
+02- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p02 02_阿里云数仓课程目标介绍.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=2
+52- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p52 52_DWS_省份粒度最近n天汇总数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=52
+12- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p12 12-基础使用-概述.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=12
+01- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p01 01_阿里云生态离线数仓课程简介.f30116.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=1
+57- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p57 57_ADS_首单用户统计数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=57
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f30280.m4a - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f30280.m4a - https://www.bilibili.com/video/BV1jF411r73p/?spm_id_from=333.1387.0.0&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca
+21- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p21 21_ODS_MaxCompute管理业务表格.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=21
+12- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p12 12_数仓建模添加业务过程.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=12
+10- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p10 10_数仓建模规划分层规则定义.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=10
+54- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p54 54_DWS_完成表格关联到MaxCompute.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=54
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.2 词性之间的修饰关系].f30280.m4a - https://www.bilibili.com/video/BV1PG411R75a?spm_id_from=333.788.videopod.sections&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca
+12- 【尚硅谷】Jenkins教程（从配置到实战） p12 12-SSH publishers超时机制.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=12
+17- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.4 形容词性从句（上）].f30102.mp4 - https://www.bilibili.com/video/BV1AN411H7ag
+25- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p25 25_DIM_省份维度表同步任务实现.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=25
+03- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p03 03_Airflow的使用特点.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=3
+15- 【半个月，搭建你的英语语法体系】第三章 从句比简单句更简单 [3.6 形容词性从句（下）].f30280.m4a - https://www.bilibili.com/video/BV1594y1p7AG
+39- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p39 39_DWD_完成表格关联maxCompute.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=39
+18- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p18 18_ODS_离线增量表使用DataWorks批量一次性同步功能.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=18
+06- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p06 06-部署-准备工作.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=6
+09- 【尚硅谷】Jenkins教程（从配置到实战） p09 09-Jenkins安装.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=9
+70- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p70 70_阿里云离线数仓总结.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=70
+03- 【尚硅谷】Jenkins教程（从配置到实战） p03 03-Jenkins+Maven+Git持续集成基础使用.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=3
+09- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p09 09-部署-初始化数据库.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=9
+11- 【尚硅谷】Jenkins教程（从配置到实战） p11 11-自动化发布到测试服务器并自动运行.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=11
+05- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p05 05_使用Miniconda安装Python3.8环境.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=5
+29- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p29 29_DIM_维度表主题划分和表格关联.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=29
+49- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p49 49_DWS_会员粒度最近1日支付表数据装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=49
+20- 【尚硅谷】Jenkins教程（从配置到实战） p20 20-配置邮箱接收构建通知.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=20
+33- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p33 33_DWD_下单明细表数据首日装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=33
+29- 【尚硅谷】Jenkins教程（从配置到实战） p29 29-总结.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=29
+57- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p57 57_ADS_首单用户统计数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=57
+17- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p17 17-基础使用-运行工作流.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=17
+59- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p59 59_ADS_完成表格关联到MaxCompute.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=59
+12- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p12 12_airflow配置邮件报警功能.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=12
+60- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p60 60_添加开发节点的依赖关系并提交节点.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=60
+15- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p15 15-基础使用-项目管理.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=15
+01- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p01 01-课程简介.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=1
+56- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p56 56_ADS_省份聚合模型创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=56
+13- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p13 13-基础使用-安全中心(上).f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=13
+17- 【尚硅谷】Jenkins教程（从配置到实战） p17 17-几种常用的构建触发器.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=17
+51- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p51 51_DWS_下单到支付时间间隔平均值最近1日表格数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=51
+06- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p06 06_dataWorks和MaxCompute简单介绍.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=6
+04- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p04 04_Python环境管理器Miniconda安装.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=4
+36- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p36 36_DWD_支付成功明细表数据每日装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=36
+14- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p14 14_DataStudio控制台设置.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=14
+18- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p18 18-基础使用-定时运行工作流.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=18
+20- 【尚硅谷】Jenkins教程（从配置到实战） p20 20-配置邮箱接收构建通知.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=20
+13- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.1 不定式].f100143.mp4 - https://www.bilibili.com/video/BV18u4y147dV
+06- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p06 06_安装启动airflow.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=6
+02- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p02 02_阿里云数仓课程目标介绍.f100110.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=2
+04- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p04 04_Python环境管理器Miniconda安装.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=4
+47- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p47 47_DWS_会员粒度历史至今下单统计模型表格创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=47
+50- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p50 50_DWS_省份粒度最近1日下单表数据装载.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=50
+26- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p26 26_DIM_用户维度拉链表首日初始化装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=26
+25- 【尚硅谷】Jenkins教程（从配置到实战） p25 25-Jenkins集群配置并发构建.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=25
+08- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p08 08_修改mysql作为底层数据库.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=8
+13- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p13 13-基础使用-安全中心(上).f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=13
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f30280.m4a - https://www.bilibili.com/video/BV1jF411r73p
+12- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p12 12_airflow配置邮件报警功能.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=12
+19- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p19 19_ODS_表格管理设置.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=19
+37- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p37 37_DWD_交易流程累积快照事实表首日装载.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=37
+45- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p45 45_DWS_下单到支付时间间隔平均值模型表格创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=45
+08- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p08 08_数据仓库原始业务表格介绍.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=8
+03- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p03 03-部署-部署模式说明.f30077.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=3
+20- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p20 20-工作流传参-上下游传参.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=20
+16- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p16 16_ODS_离线全量表格数据同步完成.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=16
+07- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p07 07_编写airflow启动停止的脚本.f30080.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=7
+06- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p06 06-部署-准备工作.f100026.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=6
+01- 【尚硅谷】Jenkins教程（从配置到实战） p01 01-Jenkins教程简介.f30077.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=1
+25- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p25 25-告警通知-告警组&告警实例配置.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=25
+26- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f30280.m4a - https://www.bilibili.com/video/BV1jF411r73p
+01- 虚拟语气（3）.f100027.mp4 - https://www.bilibili.com/video/BV12K421a7Bb
+NA- 【半个月，搭建你的英语语法体系】第一章 换一种方式理解词性 [1.1 名词、形容词、副词，这就是一切].f100143.mp4 - https://www.bilibili.com/video/BV1jF411r73p
+10- 【尚硅谷】Jenkins教程（从配置到实战） p10 10-Jenkins配置Maven+Git自动构建jar包.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=10
+05- 英语时态详解.f100143.mp4 - https://www.bilibili.com/video/BV1iJ4m1p78e
+11- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p11 11_airflow删除DAG任务.f100026.mp4 - https://www.bilibili.com/video/BV1914y1M7u6?p=11
+69- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p69 69_协同工作_quickBI的协同工作设置.f100143.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=69
+05- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p05 05_使用Miniconda安装Python3.8环境.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=5
+24- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p24 24-告警通知-准备邮箱.f30280.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=24
+17- 【尚硅谷】Jenkins教程（从配置到实战） p17 17-几种常用的构建触发器.f30080.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=17
+14- 【尚硅谷】Jenkins教程（从配置到实战） p14 14-构建前置清理脚本开发.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=14
+22- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p22 22-工作流传参-内置参数.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=22
+44- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p44 44_DWS_省份粒度最近1日下单模型表格创建.f100113.mp4 - https://www.bilibili.com/video/BV1ev411c714?p=44
+16- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p16 16_ODS_离线全量表格数据同步完成.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=16
+06- 尚硅谷大数据Airflow教程（airflow安装⧸部署⧸优化⧸案例） p06 06_安装启动airflow.f30280.m4a - https://www.bilibili.com/video/BV1914y1M7u6?p=6
+22- 【半个月，搭建你的英语语法体系】第二章 理解了简单句，你就理解了一切 [2.1.1 补语详解].f100143.mp4 - https://www.bilibili.com/video/BV1Qw411U72K
+23- 【半个月，搭建你的英语语法体系】第二章 理解了简单句，你就理解了一切 [2.1 主谓宾定状补].f100143.mp4 - https://www.bilibili.com/video/BV1rF411S7qd
+11- 【半个月，搭建你的英语语法体系】第四章 非谓语动词和从句是一回事 [4.3 分词].f100143.mp4 - https://www.bilibili.com/video/BV1Yw41117Xf
+21- 【半个月，搭建你的英语语法体系】第二章 理解了简单句，你就理解了一切 [2.2 简单句的构成 + 2.3 语法分析实践（第一弹）].f30102.mp4 - https://www.bilibili.com/video/BV1tp4y1j7BE
+06- 【尚硅谷】Jenkins教程（从配置到实战） p06 06-GitLab在SSH下安装.f30280.m4a - https://www.bilibili.com/video/BV1bS4y1471A?p=6
+18- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p18 18-基础使用-定时运行工作流.f30080.mp4 - https://www.bilibili.com/video/BV1sa411x7Ep?p=18
+20- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p20 20_ODS_增量表的实时同步.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=20
+21- 【尚硅谷】DolphinScheduler2.x安装到优化（工作流调度平台） p21 21-工作流传参-参数优先级.f30232.m4a - https://www.bilibili.com/video/BV1sa411x7Ep?p=21
+26- 【尚硅谷】Jenkins教程（从配置到实战） p26 26-Blue Ocean UI与pipeline基础语法.f100026.mp4 - https://www.bilibili.com/video/BV1bS4y1471A?p=26
+44- 尚硅谷大数据MaxCompute教程（阿里云离线数仓项目） p44 44_DWS_省份粒度最近1日下单模型表格创建.f30280.m4a - https://www.bilibili.com/video/BV1ev411c714?p=44
+NA- 推荐系统公开课——8小时完整版，讲解工业界真实的推荐系统.f100023.mp4 - https://www.bilibili.com/video/BV1HZ421U77y/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca
+NA- 推荐系统公开课——8小时完整版，讲解工业界真实的推荐系统.f30280.m4a - https://www.bilibili.com/video/BV1HZ421U77y/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca
