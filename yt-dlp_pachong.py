@@ -48,7 +48,7 @@ def download_bilibili_video(url, cookies_path):
 
 
 if __name__ == "__main__":
-    url = "https://www.bilibili.com/video/BV1HZ421U77y/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=eda3cbcf7e9446aacb1cebdf3def86ca"
+    url = "https://www.bilibili.com/bangumi/play/ep1854846?from_spmid=666.4.0.3"
     cookies_path = "cookies.txt"
     download_bilibili_video(url, cookies_path)
 
