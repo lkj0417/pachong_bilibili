@@ -3,10 +3,12 @@ import os
 import re
 import shutil
 import subprocess
+import tempfile
 import threading
 import time
 import uuid
-from datetime import datetime
+import zipfile
+from datetime import datetime, timezone
 
 import requests
 from flask import Flask, jsonify, render_template, request
@@ -49,6 +51,13 @@ PLAYLIST_URL_PATTERNS = [
     r"space\.bilibili\.com/.*/lists/",
 ]
 CHEESE_EP_PATTERN = re.compile(r"bilibili\.com/cheese/play/ep(\d+)", re.IGNORECASE)
+YTDLP_RELEASE_API = "https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest"
+FFMPEG_RELEASE_API = "https://api.github.com/repos/BtbN/FFmpeg-Builds/releases/tags/latest"
+FFMPEG_ASSET_NAME = "ffmpeg-master-latest-win64-gpl.zip"
+GITHUB_HEADERS = {
+    "Accept": "application/vnd.github+json",
+    "User-Agent": "pachong-bilibili-updater",
+}
 
 
 def now_iso():
@@ -88,6 +97,199 @@ def get_yt_dlp_path(config):
         return resolve_path(config["yt_dlp_path"])
     local = os.path.join(BASE_DIR, "yt-dlp.exe")
     return local if os.path.exists(local) else "yt-dlp"
+
+
+def resolve_executable(command):
+    if not command:
+        return ""
+    if os.path.isfile(command):
+        return os.path.abspath(command)
+    found = shutil.which(command)
+    return found or ""
+
+
+def run_command_output(cmd, timeout=20):
+    try:
+        proc = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=timeout,
+        )
+        return {
+            "ok": proc.returncode == 0,
+            "returncode": proc.returncode,
+            "stdout": proc.stdout.strip(),
+            "stderr": proc.stderr.strip(),
+        }
+    except FileNotFoundError:
+        return {"ok": False, "returncode": None, "stdout": "", "stderr": "找不到可执行文件"}
+    except subprocess.TimeoutExpired:
+        return {"ok": False, "returncode": None, "stdout": "", "stderr": "命令执行超时"}
+
+
+def version_tuple(value):
+    numbers = re.findall(r"\d+", str(value or ""))[:4]
+    return tuple(int(item) for item in numbers)
+
+
+def parse_github_time(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def file_mtime_iso(path):
+    if not path or not os.path.exists(path):
+        return ""
+    return datetime.fromtimestamp(os.path.getmtime(path), tz=timezone.utc).isoformat(timespec="seconds")
+
+
+def github_get_json(url):
+    response = requests.get(url, headers=GITHUB_HEADERS, timeout=20)
+    response.raise_for_status()
+    return response.json()
+
+
+def latest_yt_dlp_release():
+    data = github_get_json(YTDLP_RELEASE_API)
+    tag = str(data.get("tag_name") or "").lstrip("v")
+    return {
+        "version": tag,
+        "name": data.get("name") or tag,
+        "url": data.get("html_url") or "https://github.com/yt-dlp/yt-dlp/releases/latest",
+        "published_at": data.get("published_at") or "",
+    }
+
+
+def latest_ffmpeg_release():
+    data = github_get_json(FFMPEG_RELEASE_API)
+    assets = data.get("assets") or []
+    asset = next((item for item in assets if item.get("name") == FFMPEG_ASSET_NAME), None)
+    if not asset:
+        asset = next(
+            (
+                item
+                for item in assets
+                if "win64" in item.get("name", "") and "gpl" in item.get("name", "") and item.get("name", "").endswith(".zip")
+            ),
+            None,
+        )
+    if not asset:
+        raise RuntimeError("未在 FFmpeg-Builds 最新发布中找到 Windows GPL zip 资源")
+    return {
+        "tag": data.get("tag_name") or "latest",
+        "name": asset.get("name") or FFMPEG_ASSET_NAME,
+        "url": data.get("html_url") or "https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest",
+        "download_url": asset.get("browser_download_url"),
+        "updated_at": asset.get("updated_at") or data.get("published_at") or "",
+        "size": asset.get("size") or 0,
+    }
+
+
+def get_yt_dlp_status(config, include_remote=False):
+    configured = get_yt_dlp_path(config)
+    executable = resolve_executable(configured)
+    version_result = run_command_output([executable or configured, "--version"], timeout=15) if (executable or configured) else {}
+    local_version = (version_result.get("stdout") or "").splitlines()[0] if version_result.get("stdout") else ""
+    status = {
+        "configured": configured,
+        "path": executable or configured,
+        "ok": bool(executable and version_result.get("ok")),
+        "version": local_version,
+        "latest": None,
+        "update_available": False,
+        "can_update": bool(executable or configured),
+        "message": version_result.get("stderr") or "",
+    }
+    if include_remote:
+        try:
+            latest = latest_yt_dlp_release()
+            status["latest"] = latest
+            if local_version and latest.get("version"):
+                status["update_available"] = version_tuple(latest["version"]) > version_tuple(local_version)
+        except Exception as exc:
+            status["latest_error"] = str(exc)
+    return status
+
+
+def get_ffmpeg_install_root(ffmpeg_path):
+    if ffmpeg_path:
+        current = os.path.abspath(os.path.dirname(ffmpeg_path))
+        while current and current != os.path.dirname(current):
+            if os.path.basename(current).lower() == "ffmpeg-master-latest-win64-gpl":
+                return current
+            current = os.path.dirname(current)
+    return os.path.abspath(os.path.join(BASE_DIR, "..", "ffmpeg-master-latest-win64-gpl"))
+
+
+def get_ffmpeg_status(config, include_remote=False):
+    ffmpeg_path = get_ffmpeg_path(config)
+    version_result = run_command_output([ffmpeg_path, "-version"], timeout=15) if ffmpeg_path else {}
+    first_line = (version_result.get("stdout") or "").splitlines()[0] if version_result.get("stdout") else ""
+    status = {
+        "path": ffmpeg_path,
+        "ok": bool(ffmpeg_path and version_result.get("ok")),
+        "version": first_line,
+        "latest": None,
+        "update_available": False,
+        "can_update": os.name == "nt",
+        "managed_root": get_ffmpeg_install_root(ffmpeg_path),
+        "local_mtime": file_mtime_iso(ffmpeg_path),
+        "message": version_result.get("stderr") or "",
+    }
+    if include_remote:
+        try:
+            latest = latest_ffmpeg_release()
+            status["latest"] = latest
+            remote_time = parse_github_time(latest.get("updated_at"))
+            local_time = datetime.fromtimestamp(os.path.getmtime(ffmpeg_path), tz=timezone.utc) if ffmpeg_path and os.path.exists(ffmpeg_path) else None
+            saved_remote = config.get("ffmpeg_release_updated_at")
+            if saved_remote:
+                status["update_available"] = saved_remote != latest.get("updated_at")
+            else:
+                status["update_available"] = bool(remote_time and (not ffmpeg_path or (local_time and remote_time > local_time)))
+        except Exception as exc:
+            status["latest_error"] = str(exc)
+    return status
+
+
+def tools_status(config, include_remote=False):
+    return {
+        "yt_dlp": get_yt_dlp_status(config, include_remote=include_remote),
+        "ffmpeg": get_ffmpeg_status(config, include_remote=include_remote),
+    }
+
+
+def safe_extract_zip(zip_path, target_dir):
+    target_dir = os.path.abspath(target_dir)
+    with zipfile.ZipFile(zip_path) as archive:
+        for member in archive.infolist():
+            destination = os.path.abspath(os.path.join(target_dir, member.filename))
+            if not destination.startswith(target_dir + os.sep) and destination != target_dir:
+                raise RuntimeError("压缩包包含不安全路径，已取消解压")
+        archive.extractall(target_dir)
+
+
+def find_extracted_ffmpeg_root(extract_dir):
+    for root, _, files in os.walk(extract_dir):
+        if "ffmpeg.exe" in files and os.path.basename(root).lower() == "bin":
+            return os.path.dirname(root)
+    raise RuntimeError("压缩包中未找到 bin\\ffmpeg.exe")
+
+
+def download_file(url, destination):
+    with requests.get(url, stream=True, headers=GITHUB_HEADERS, timeout=(10, 120)) as response:
+        response.raise_for_status()
+        with open(destination, "wb") as f:
+            for chunk in response.iter_content(chunk_size=1024 * 1024):
+                if chunk:
+                    f.write(chunk)
 
 
 def get_cookies_path(config):
@@ -479,10 +681,11 @@ def api_health():
     yt_dlp = get_yt_dlp_path(config)
     cookies = get_cookies_path(config)
     ffmpeg_path = get_ffmpeg_path(config)
+    yt_dlp_executable = resolve_executable(yt_dlp)
     return jsonify(
         {
             "yt_dlp": yt_dlp,
-            "yt_dlp_ok": os.path.isfile(yt_dlp),
+            "yt_dlp_ok": bool(yt_dlp_executable),
             "cookies": cookies,
             "cookies_ok": bool(cookies),
             "output_dir": get_output_dir(config),
@@ -490,6 +693,85 @@ def api_health():
             "ffmpeg_ok": bool(ffmpeg_path and os.path.isfile(ffmpeg_path)),
         }
     )
+
+
+@app.get("/api/tools/status")
+def api_tools_status():
+    include_remote = request.args.get("remote") in {"1", "true", "yes"}
+    return jsonify(tools_status(load_config(), include_remote=include_remote))
+
+
+@app.post("/api/tools/yt-dlp/update")
+def api_update_yt_dlp():
+    config = load_config()
+    before = get_yt_dlp_status(config, include_remote=True)
+    executable = before.get("path")
+    if not executable:
+        return jsonify({"ok": False, "message": "找不到 yt-dlp，请先在配置中填写 yt-dlp.exe 路径"}), 400
+
+    proc = run_command_output([executable, "-U"], timeout=180)
+    after = get_yt_dlp_status(config, include_remote=True)
+    ok = bool(proc.get("ok"))
+    return jsonify(
+        {
+            "ok": ok,
+            "message": "yt-dlp 更新完成" if ok else "yt-dlp 更新失败",
+            "before": before,
+            "after": after,
+            "stdout": proc.get("stdout"),
+            "stderr": proc.get("stderr"),
+            "returncode": proc.get("returncode"),
+        }
+    ), (200 if ok else 500)
+
+
+@app.post("/api/tools/ffmpeg/update")
+def api_update_ffmpeg():
+    if os.name != "nt":
+        return jsonify({"ok": False, "message": "当前自动更新 FFmpeg 仅支持 Windows 构建"}), 400
+
+    config = load_config()
+    before = get_ffmpeg_status(config, include_remote=True)
+    try:
+        latest = before.get("latest") or latest_ffmpeg_release()
+    except Exception as exc:
+        return jsonify({"ok": False, "message": f"获取 FFmpeg 最新版本失败：{exc}", "before": before}), 500
+    download_url = latest.get("download_url")
+    if not download_url:
+        return jsonify({"ok": False, "message": "未找到 FFmpeg 下载地址"}), 500
+
+    install_root = before.get("managed_root") or get_ffmpeg_install_root(before.get("path"))
+    os.makedirs(os.path.dirname(install_root), exist_ok=True)
+    temp_dir = tempfile.mkdtemp(prefix="ffmpeg-update-")
+    try:
+        zip_path = os.path.join(temp_dir, latest.get("name") or FFMPEG_ASSET_NAME)
+        extract_dir = os.path.join(temp_dir, "extract")
+        os.makedirs(extract_dir, exist_ok=True)
+        download_file(download_url, zip_path)
+        safe_extract_zip(zip_path, extract_dir)
+        extracted_root = find_extracted_ffmpeg_root(extract_dir)
+        shutil.copytree(extracted_root, install_root, dirs_exist_ok=True)
+
+        ffmpeg_exe = os.path.join(install_root, "bin", "ffmpeg.exe")
+        config["ffmpeg_location"] = os.path.relpath(ffmpeg_exe, BASE_DIR).replace(os.sep, "/")
+        config["ffmpeg_release_name"] = latest.get("name") or FFMPEG_ASSET_NAME
+        config["ffmpeg_release_updated_at"] = latest.get("updated_at") or ""
+        save_config(config)
+
+        after = get_ffmpeg_status(config, include_remote=True)
+        return jsonify(
+            {
+                "ok": True,
+                "message": "FFmpeg 更新完成",
+                "before": before,
+                "after": after,
+                "install_root": install_root,
+            }
+        )
+    except Exception as exc:
+        return jsonify({"ok": False, "message": f"FFmpeg 更新失败：{exc}", "before": before}), 500
+    finally:
+        shutil.rmtree(temp_dir, ignore_errors=True)
 
 
 @app.get("/api/config")

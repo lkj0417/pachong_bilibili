@@ -907,6 +907,73 @@ button.ghost {
   overflow: hidden;
 }
 
+.tools-card {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, var(--accent-soft), transparent 58%),
+    color-mix(in srgb, var(--panel-2) 82%, transparent);
+}
+
+.tools-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tools-card h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.tools-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tool-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--panel) 54%, transparent);
+}
+
+.tool-item + .tool-item {
+  margin-top: 8px;
+}
+
+.tool-item strong,
+.tool-item span {
+  display: block;
+}
+
+.tool-item span {
+  margin-top: 3px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tool-item button {
+  padding: 7px 11px;
+  font-size: 12px;
+}
+
+#tools-msg {
+  margin-top: 10px;
+}
+
 .guide summary {
   display: flex;
   align-items: center;
@@ -1094,5 +1161,19 @@ button.ghost {
   .file-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .tools-card-head,
+  .tool-item {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-card-head {
+    flex-direction: column;
+  }
+
+  .tool-item button,
+  .tools-card-head button {
+    width: 100%;
   }
 }

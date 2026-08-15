@@ -71,6 +71,106 @@ async function loadHealth() {
   }
 }
 
+function shortText(value, maxLength = 72) {
+  const text = String(value || "");
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text;
+}
+
+function setToolMessage(text, color = "var(--muted)") {
+  const msg = $("#tools-msg");
+  if (!msg) return;
+  msg.textContent = text;
+  msg.style.color = color;
+}
+
+function formatDateTime(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleString("zh-CN", { hour12: false });
+}
+
+function renderToolStatus(data, remoteChecked = false) {
+  const ytDlp = data.yt_dlp || {};
+  const ffmpeg = data.ffmpeg || {};
+  const ytButton = $("#update-yt-dlp");
+  const ffmpegButton = $("#update-ffmpeg");
+  const ytVersion = $("#yt-dlp-version");
+  const ffmpegVersion = $("#ffmpeg-version");
+
+  const ytLocal = ytDlp.version || (ytDlp.ok ? "已安装" : "未找到");
+  const ytLatest = ytDlp.latest?.version || "";
+  const ytUpdateText = ytDlp.update_available ? ` · 最新 ${ytLatest}，可更新` : ytLatest ? ` · 最新 ${ytLatest}` : "";
+  ytVersion.textContent = `当前 ${ytLocal}${ytUpdateText}`;
+  ytVersion.title = ytDlp.path || "";
+  ytButton.disabled = !ytDlp.update_available;
+  ytButton.textContent = ytDlp.update_available ? "更新" : "已最新";
+  setPill("#yt-dlp-status", Boolean(ytDlp.ok), `yt-dlp: ${ytDlp.version || (ytDlp.ok ? "已就绪" : "未找到")}`);
+
+  const ffLocal = ffmpeg.version ? shortText(ffmpeg.version.replace(/^ffmpeg version\s*/i, ""), 48) : ffmpeg.ok ? "已安装" : "未找到";
+  const ffLatestTime = ffmpeg.latest?.updated_at ? formatDateTime(ffmpeg.latest.updated_at) : "";
+  const ffUpdateText = ffmpeg.update_available ? ` · 发现新构建 ${ffLatestTime}` : ffLatestTime ? ` · 最新构建 ${ffLatestTime}` : "";
+  ffmpegVersion.textContent = `当前 ${ffLocal}${ffUpdateText}`;
+  ffmpegVersion.title = ffmpeg.path || "";
+  ffmpegButton.disabled = !ffmpeg.update_available || !ffmpeg.can_update;
+  ffmpegButton.textContent = ffmpeg.update_available ? "更新" : "已最新";
+  setPill("#ffmpeg-status", Boolean(ffmpeg.ok), `ffmpeg: ${ffmpeg.ok ? "已就绪" : "未配置"}`);
+
+  if (remoteChecked) {
+    const errors = [ytDlp.latest_error, ffmpeg.latest_error].filter(Boolean);
+    if (errors.length) {
+      setToolMessage(`部分最新版本检查失败：${errors.join("；")}`, "var(--yellow)");
+    } else if (ytDlp.update_available || ffmpeg.update_available) {
+      setToolMessage("发现可更新的工具，点击对应按钮即可自动更新。", "var(--yellow)");
+    } else {
+      setToolMessage("检查完成：当前工具已是最新或无需更新。", "var(--green)");
+    }
+  }
+}
+
+async function loadToolStatus(remote = false) {
+  const checkButton = $("#check-tools");
+  if (remote) {
+    checkButton.disabled = true;
+    checkButton.textContent = "检查中…";
+    setToolMessage("正在连接 GitHub 检查最新版本…");
+  }
+  try {
+    const data = await api(`/api/tools/status${remote ? "?remote=1" : ""}`);
+    renderToolStatus(data, remote);
+  } catch (error) {
+    setToolMessage(error.message, "var(--red)");
+  } finally {
+    if (remote) {
+      checkButton.disabled = false;
+      checkButton.textContent = "检查最新";
+    }
+  }
+}
+
+async function updateTool(tool) {
+  const isYtDlp = tool === "yt-dlp";
+  const button = isYtDlp ? $("#update-yt-dlp") : $("#update-ffmpeg");
+  const endpoint = isYtDlp ? "/api/tools/yt-dlp/update" : "/api/tools/ffmpeg/update";
+  const name = isYtDlp ? "yt-dlp" : "FFmpeg";
+  const originalText = button.textContent;
+  button.disabled = true;
+  button.textContent = "更新中…";
+  setToolMessage(`${name} 正在更新，请不要关闭页面${isYtDlp ? "" : "，FFmpeg 下载可能需要几分钟"}。`);
+  try {
+    const data = await api(endpoint, { method: "POST", body: "{}" });
+    const detail = [data.message, data.stdout, data.stderr].filter(Boolean).join("；");
+    setToolMessage(detail || `${name} 更新完成`, "var(--green)");
+    await loadToolStatus(true);
+    await loadConfig();
+    await loadHealth();
+  } catch (error) {
+    setToolMessage(error.message, "var(--red)");
+    button.disabled = false;
+    button.textContent = originalText;
+  }
+}
+
 async function loadConfig() {
   try {
     const data = await api("/api/config");
@@ -388,6 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadHealth();
   loadConfig();
+  loadToolStatus(false);
   loadTasks();
   loadFiles();
   loadLog();
@@ -411,6 +512,7 @@ document.addEventListener("DOMContentLoaded", () => {
       message.textContent = "配置已保存";
       message.style.color = "var(--green)";
       await loadHealth();
+      await loadToolStatus(false);
       await loadFiles();
     } catch (error) {
       const message = $("#config-msg");
@@ -420,6 +522,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   $("#check-cookies").addEventListener("click", checkCookies);
+  $("#check-tools").addEventListener("click", () => loadToolStatus(true));
+  $("#update-yt-dlp").addEventListener("click", () => updateTool("yt-dlp"));
+  $("#update-ffmpeg").addEventListener("click", () => updateTool("ffmpeg"));
   $("#start-download").addEventListener("click", startDownload);
   $("#refresh-files").addEventListener("click", loadFiles);
   $("#refresh-files-2").addEventListener("click", loadFiles);

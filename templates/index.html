@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bilibili 爬虫控制台</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href='{{ url_for("static", filename="style.css") }}'>
 </head>
 <body>
   <header class="topbar">
@@ -63,6 +63,31 @@
         <button type="submit">保存配置</button>
         <p class="hint" id="config-msg"></p>
       </form>
+
+      <section class="tools-card" aria-label="工具版本更新">
+        <div class="tools-card-head">
+          <div>
+            <h3>工具版本</h3>
+            <p>检查 yt-dlp 与 FFmpeg 是否有新版本</p>
+          </div>
+          <button type="button" id="check-tools" class="ghost">检查最新</button>
+        </div>
+        <div class="tool-item" id="yt-dlp-tool">
+          <div>
+            <strong>yt-dlp</strong>
+            <span id="yt-dlp-version">检测中…</span>
+          </div>
+          <button type="button" id="update-yt-dlp" class="secondary" disabled>更新</button>
+        </div>
+        <div class="tool-item" id="ffmpeg-tool">
+          <div>
+            <strong>FFmpeg</strong>
+            <span id="ffmpeg-version">检测中…</span>
+          </div>
+          <button type="button" id="update-ffmpeg" class="secondary" disabled>更新</button>
+        </div>
+        <p class="hint" id="tools-msg"></p>
+      </section>
 
       <details class="guide">
         <summary>📖 如何获取可用的 cookies</summary>
@@ -193,6 +218,6 @@
     </section>
   </main>
 
-  <script src="{{ url_for('static', filename='app.js') }}"></script>
+  <script src='{{ url_for("static", filename="app.js") }}'></script>
 </body>
 </html>
