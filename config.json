@@ -1,0 +1,7 @@
+{
+  "cookies_path": "cookies.txt",
+  "output_dir": "C:\\Users\\lkj04\\Desktop\\project\\pachong\\pachong_bilibili",
+  "ffmpeg_location": "../ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe",
+  "yt_dlp_path": "",
+  "auto_organize": true
+}

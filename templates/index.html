@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilibili 爬虫控制台</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎬 Bilibili 爬虫控制台</div>
+    <div class="health" id="health">
+      <span class="pill" id="yt-dlp-status">yt-dlp: 检测中…</span>
+      <span class="pill" id="cookies-status">cookies: 检测中…</span>
+      <span class="pill" id="ffmpeg-status">ffmpeg: 检测中…</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel config-panel">
+      <h2>⚙️ 配置</h2>
+      <form id="config-form">
+        <label>cookies 文件
+          <input name="cookies_path" placeholder="cookies.txt">
+        </label>
+        <button type="button" id="check-cookies" class="secondary">检查 cookies</button>
+        <p class="hint" id="cookies-check-msg"></p>
+        <label>输出目录
+          <input name="output_dir" placeholder="留空使用项目目录">
+        </label>
+        <label>ffmpeg 路径（可选）
+          <input name="ffmpeg_location" placeholder="ffmpeg.exe 或所在目录">
+        </label>
+        <label>yt-dlp 路径（可选）
+          <input name="yt_dlp_path" placeholder="留空自动检测 yt-dlp.exe">
+        </label>
+        <label class="check">
+          <input type="checkbox" name="auto_organize">
+          下载完成后自动整理 mp4
+        </label>
+        <button type="submit">保存配置</button>
+        <p class="hint" id="config-msg"></p>
+      </form>
+
+      <details class="guide">
+        <summary>📖 如何获取可用的 cookies</summary>
+        <div class="guide-body">
+          <ol>
+            <li>在 Chrome / Edge 安装扩展 <b>Get cookies.txt LOCALLY</b>；Firefox 用户可安装 <b>cookies.txt</b>。</li>
+            <li>先登录 <b>bilibili.com</b>，然后打开扩展，点击 <b>Export</b> 或 <b>导出</b>，保存为 <b>cookies.txt</b>。</li>
+            <li>把导出的 cookies.txt 覆盖到项目目录：<code>C:\Users\lkj04\Desktop\project\pachong\pachong_bilibili\cookies.txt</code></li>
+            <li>回到本页面，点击「检查 cookies」，看到「cookies 可用」后即可开始下载。</li>
+          </ol>
+          <p class="guide-note">
+            注意：这里需要的是 Netscape 格式的 cookies.txt，不要直接粘贴浏览器地址栏里的 cookie 字符串。
+            关键登录项是 <code>SESSDATA</code>；如果检查结果显示它缺失或已过期，cookies 通常无法通过登录校验。
+          </p>
+        </div>
+      </details>
+    </aside>
+
+    <section class="content">
+      <div class="panel download-panel">
+        <h2>📥 下载视频</h2>
+        <textarea id="urls" rows="5" placeholder="每行一个 Bilibili 视频 URL"></textarea>
+        <div class="quality-row">
+          <label for="quality">下载画质</label>
+          <select id="quality">
+            <option value="best">最高画质（自动）</option>
+            <option value="2160p">4K / 2160P</option>
+            <option value="1080p">1080P</option>
+            <option value="720p">720P</option>
+            <option value="480p">480P</option>
+          </select>
+          <label for="fragments">并发线程</label>
+          <input id="fragments" type="number" min="1" max="32" value="8">
+        </div>
+        <label class="check playlist-check">
+          <input type="checkbox" id="download-playlist">
+          下载整个合集 / 分P
+        </label>
+        <p class="hint">
+          合集 / 课堂 / 番剧请使用课程或剧集列表链接（通常包含 ss），并勾选「下载整个合集 / 分P」。
+          当前正在播放的 ep 链接只会下载单集。
+        </p>
+        <div class="actions">
+          <button id="start-download">开始下载</button>
+          <button id="refresh-files" class="secondary">刷新文件</button>
+          <button id="organize" class="secondary">整理 mp4</button>
+          <button id="merge-media" class="secondary">合并音视频</button>
+          <button id="clear-tasks" class="ghost">清除已完成任务</button>
+        </div>
+      </div>
+
+      <div class="panel tasks-panel">
+        <div class="panel-head">
+          <h2>📋 任务</h2>
+          <span id="task-count"></span>
+        </div>
+        <div id="tasks" class="tasks"></div>
+      </div>
+
+      <div class="two-col">
+        <div class="panel files-panel">
+          <div class="panel-head">
+            <h2>📁 文件</h2>
+            <button id="refresh-files-2" class="ghost">刷新</button>
+          </div>
+          <div id="files" class="files"></div>
+        </div>
+        <div class="panel log-panel">
+          <div class="panel-head">
+            <h2>🗒️ 下载日志</h2>
+            <span id="log-count"></span>
+          </div>
+          <div id="log" class="log"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
