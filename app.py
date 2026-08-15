@@ -372,8 +372,12 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
         "--encoding",
         "utf-8",
     ]
-    if download_playlist or is_playlist_url(url):
+    playlist = download_playlist or is_playlist_url(url)
+    if playlist:
         cmd.append("--yes-playlist")
+        output_template = os.path.join(out_dir, "%(playlist_title)s", "%(title)s.%(ext)s")
+    else:
+        output_template = os.path.join(out_dir, "%(title)s [%(id)s].%(ext)s")
     cmd.extend(
         [
             "-f",
@@ -383,7 +387,7 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
             "--concurrent-fragments",
             str(concurrent_fragments),
             "-o",
-            os.path.join(out_dir, "%(title)s [%(id)s].%(ext)s"),
+            output_template,
             url,
         ]
     )
@@ -421,7 +425,14 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
             update_task(task_id, message=line)
 
     proc.wait()
-    return proc.returncode == 0
+    if proc.returncode == 0:
+        return "done"
+
+    with tasks_lock:
+        log_text = "\n".join(tasks.get(task_id, {}).get("log", []))
+    if "Finished downloading playlist" in log_text or "You need to purchase" in log_text:
+        return "partial"
+    return "error"
 
 
 def _run_batch(batch_id, urls, config, quality="best", download_playlist=False, concurrent_fragments=8):
@@ -439,11 +450,14 @@ def _run_batch(batch_id, urls, config, quality="best", download_playlist=False, 
             continue
 
         update_task(task_id, "running", message="开始下载")
-        if _download_one(url, config, task_id, quality, download_playlist, concurrent_fragments):
+        result = _download_one(url, config, task_id, quality, download_playlist, concurrent_fragments)
+        if result == "done":
             downloaded.add(url)
             save_download_log(downloaded)
             success_count += 1
             update_task(task_id, "done", progress=100.0, message="下载完成")
+        elif result == "partial":
+            update_task(task_id, "partial", progress=100.0, message="部分完成：部分分集需购买或下载失败")
         else:
             update_task(task_id, "error", message="下载失败，详见日志")
 
@@ -561,7 +575,11 @@ def api_tasks():
 @app.post("/api/tasks/clear")
 def api_tasks_clear():
     with tasks_lock:
-        to_remove = [task_id for task_id, task in tasks.items() if task["status"] in {"done", "error", "skipped"}]
+        to_remove = [
+            task_id
+            for task_id, task in tasks.items()
+            if task["status"] in {"done", "error", "skipped", "partial"}
+        ]
         for task_id in to_remove:
             del tasks[task_id]
     return jsonify({"ok": True, "removed": len(to_remove)})

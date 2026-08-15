@@ -49,6 +49,10 @@ def flatten_collection(target_dir, dry_run=False):
 
 
 def main():
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     dry_run = "--dry-run" in sys.argv
     args = [arg for arg in sys.argv[1:] if arg != "--dry-run"]
     target = args[0] if args else os.getcwd()

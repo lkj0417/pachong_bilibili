@@ -86,8 +86,12 @@ def download_video(url, output_dir=None):
         "--encoding",
         "utf-8",
     ]
-    if is_playlist_url(url):
+    playlist = is_playlist_url(url)
+    if playlist:
         cmd.append("--yes-playlist")
+        output_template = os.path.join(output_dir, "%(playlist_title)s", "%(title)s.%(ext)s")
+    else:
+        output_template = os.path.join(output_dir, "%(title)s [%(id)s].%(ext)s")
     cmd.extend(
         [
             "-f",
@@ -97,7 +101,7 @@ def download_video(url, output_dir=None):
             "--concurrent-fragments",
             str(CONCURRENT_FRAGMENTS),
             "-o",
-            os.path.join(output_dir, "%(title)s [%(id)s].%(ext)s"),
+            output_template,
             url,
         ]
     )

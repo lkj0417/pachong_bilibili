@@ -386,6 +386,11 @@ button.ghost {
   color: var(--yellow);
 }
 
+.badge.partial {
+  background: rgba(240, 183, 82, 0.18);
+  color: var(--yellow);
+}
+
 .task-url {
   flex: 1;
   overflow: hidden;
@@ -1091,4 +1096,3 @@ button.ghost {
     flex-direction: column;
   }
 }
-

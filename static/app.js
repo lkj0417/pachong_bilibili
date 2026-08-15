@@ -141,6 +141,7 @@ const STATUS_TEXT = {
   pending: "等待",
   running: "下载中",
   done: "完成",
+  partial: "部分完成",
   error: "失败",
   skipped: "跳过",
 };
