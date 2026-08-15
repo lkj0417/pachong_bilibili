@@ -1026,6 +1026,7 @@ button.ghost {
 .task.done::before { background: var(--green); }
 .task.error::before { background: var(--red); }
 .task.skipped::before { background: var(--yellow); }
+.task.partial::before { background: var(--yellow); }
 
 .task:hover {
   border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
@@ -1054,6 +1055,7 @@ button.ghost {
 .task.done .bar { background: linear-gradient(90deg, var(--green), #7ddf9d); }
 .task.error .bar { background: linear-gradient(90deg, var(--red), #ff9b91); }
 .task.skipped .bar { background: linear-gradient(90deg, var(--yellow), #ffd37b); }
+.task.partial .bar { background: linear-gradient(90deg, var(--yellow), #ffd37b); }
 
 .task-log pre {
   border: 1px solid var(--border);

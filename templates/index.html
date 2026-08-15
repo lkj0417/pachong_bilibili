@@ -60,6 +60,13 @@
           <input type="checkbox" name="auto_organize">
           下载完成后自动整理 mp4
         </label>
+        <label class="check">
+          <input type="checkbox" name="auto_repair_partial">
+          部分完成时自动修复缺失分集
+        </label>
+        <label>修复重试次数
+          <input name="partial_repair_attempts" type="number" min="0" max="10" value="3">
+        </label>
         <button type="submit">保存配置</button>
         <p class="hint" id="config-msg"></p>
       </form>

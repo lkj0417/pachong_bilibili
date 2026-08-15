@@ -20,6 +20,7 @@ import mp4_file_organizer
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
 DOWNLOAD_LOG = os.path.join(BASE_DIR, "downloaded_files.txt")
+DOWNLOAD_ARCHIVE = os.path.join(BASE_DIR, "yt_dlp_archive.txt")
 
 app = Flask(__name__)
 
@@ -32,9 +33,12 @@ DEFAULT_CONFIG = {
     "ffmpeg_location": "",
     "yt_dlp_path": "",
     "auto_organize": True,
+    "auto_repair_partial": True,
+    "partial_repair_attempts": 3,
 }
 
 PROGRESS_RE = re.compile(r"\[download\]\s+(\d+(?:\.\d+)?)%")
+PLAYLIST_ITEM_RE = re.compile(r"\[download\]\s+Downloading item\s+(\d+)\s+of\s+(\d+)", re.IGNORECASE)
 COOKIE_KEYS = ["SESSDATA", "bili_jct", "DedeUserID"]
 DEFAULT_COOKIE_TEST_URL = "https://www.bilibili.com/video/BV1xx411c7mD"
 QUALITY_FORMATS = {
@@ -90,6 +94,23 @@ def save_config(config):
 
 def get_output_dir(config):
     return resolve_path(config.get("output_dir")) or BASE_DIR
+
+
+def clamp_int(value, default, minimum, maximum):
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        return default
+    return max(minimum, min(maximum, number))
+
+
+def get_partial_repair_attempts(config):
+    return clamp_int(config.get("partial_repair_attempts"), 3, 0, 10)
+
+
+def get_download_archive_path(config):
+    archive = config.get("download_archive") or DOWNLOAD_ARCHIVE
+    return resolve_path(archive) if not os.path.isabs(archive) else archive
 
 
 def get_yt_dlp_path(config):
@@ -561,7 +582,75 @@ def append_task_log(task_id, line):
             del task["log"][: len(task["log"]) - 500]
 
 
-def _download_one(url, config, task_id, quality="best", download_playlist=False, concurrent_fragments=8):
+def get_task_log_lines(task_id):
+    with tasks_lock:
+        return list(tasks.get(task_id, {}).get("log", []))
+
+
+def parse_failed_playlist_items(log_lines):
+    failed = set()
+    current_item = None
+    total_items = None
+    hard_error_markers = (
+        "ERROR:",
+        "This video is unavailable",
+        "Private video",
+        "Video unavailable",
+        "You need to purchase",
+        "Unable to download",
+        "giving up after",
+    )
+    for line in log_lines:
+        item_match = PLAYLIST_ITEM_RE.search(line)
+        if item_match:
+            current_item = int(item_match.group(1))
+            total_items = int(item_match.group(2))
+            continue
+        if current_item and any(marker in line for marker in hard_error_markers):
+            failed.add(current_item)
+    return {"failed": sorted(failed), "total": total_items}
+
+
+def describe_failed_items(task_id):
+    parsed = parse_failed_playlist_items(get_task_log_lines(task_id))
+    failed = parsed.get("failed") or []
+    if not failed:
+        return "未能从日志中精确识别失败分集；已保留完整日志供排查"
+    total = parsed.get("total")
+    suffix = f" / {total}" if total else ""
+    return f"疑似失败分集：{', '.join(f'p{item}' for item in failed)}{suffix}"
+
+
+def _repair_partial_playlist(url, config, task_id, quality="best", download_playlist=False, concurrent_fragments=8):
+    if not bool(config.get("auto_repair_partial", True)):
+        append_task_log(task_id, "[auto-repair] 已关闭自动修复部分完成任务。")
+        return False
+
+    attempts = get_partial_repair_attempts(config)
+    if attempts <= 0:
+        append_task_log(task_id, "[auto-repair] 修复重试次数为 0，跳过自动修复。")
+        return False
+
+    archive_path = get_download_archive_path(config)
+    append_task_log(task_id, f"[auto-repair] 检测到合集部分完成，将使用归档跳过已完成分集：{archive_path}")
+    append_task_log(task_id, f"[auto-repair] {describe_failed_items(task_id)}")
+
+    for attempt in range(1, attempts + 1):
+        update_task(task_id, "running", progress=0, message=f"自动修复部分完成：第 {attempt}/{attempts} 次重试")
+        append_task_log(task_id, f"[auto-repair] ===== 第 {attempt}/{attempts} 次修复开始 =====")
+        result = _download_one(url, config, task_id, quality, download_playlist, concurrent_fragments, repair_attempt=attempt)
+        if result == "done":
+            append_task_log(task_id, "[auto-repair] 修复成功：缺失分集已补齐。")
+            return True
+        append_task_log(task_id, f"[auto-repair] 第 {attempt}/{attempts} 次修复仍未完成，结果：{result}。")
+        if attempt < attempts:
+            time.sleep(3)
+
+    append_task_log(task_id, f"[auto-repair] 自动修复失败：{describe_failed_items(task_id)}")
+    return False
+
+
+def _download_one(url, config, task_id, quality="best", download_playlist=False, concurrent_fragments=8, repair_attempt=0):
     yt_dlp = get_yt_dlp_path(config)
     out_dir = get_output_dir(config)
     os.makedirs(out_dir, exist_ok=True)
@@ -576,12 +665,22 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
     ]
     playlist = download_playlist or is_playlist_url(url)
     if playlist:
-        cmd.append("--yes-playlist")
+        archive_path = get_download_archive_path(config)
+        os.makedirs(os.path.dirname(archive_path), exist_ok=True)
+        cmd.extend(["--yes-playlist", "--download-archive", archive_path])
         output_template = os.path.join(out_dir, "%(playlist_title)s", "%(title)s.%(ext)s")
     else:
         output_template = os.path.join(out_dir, "%(title)s [%(id)s].%(ext)s")
     cmd.extend(
         [
+            "--retries",
+            "15",
+            "--fragment-retries",
+            "15",
+            "--retry-sleep",
+            "5",
+            "--socket-timeout",
+            "30",
             "-f",
             format_spec,
             "--merge-output-format",
@@ -602,7 +701,8 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
     if ffmpeg_path:
         cmd.extend(["--ffmpeg-location", ffmpeg_path])
 
-    update_task(task_id, message=" ".join(cmd))
+    prefix = f"自动修复第 {repair_attempt} 次：" if repair_attempt else ""
+    update_task(task_id, message=f"{prefix}{' '.join(cmd)}")
     try:
         proc = subprocess.Popen(
             cmd,
@@ -659,7 +759,14 @@ def _run_batch(batch_id, urls, config, quality="best", download_playlist=False, 
             success_count += 1
             update_task(task_id, "done", progress=100.0, message="下载完成")
         elif result == "partial":
-            update_task(task_id, "partial", progress=100.0, message="部分完成：部分分集需购买或下载失败")
+            repaired = _repair_partial_playlist(url, config, task_id, quality, download_playlist, concurrent_fragments)
+            if repaired:
+                downloaded.add(url)
+                save_download_log(downloaded)
+                success_count += 1
+                update_task(task_id, "done", progress=100.0, message="部分完成已自动修复，下载完成")
+            else:
+                update_task(task_id, "partial", progress=99.0, message=f"部分完成，自动修复失败：{describe_failed_items(task_id)}")
         else:
             update_task(task_id, "error", message="下载失败，详见日志")
 
@@ -790,8 +897,18 @@ def api_cookies_check():
 @app.post("/api/config")
 def api_save_config():
     data = request.get_json(silent=True) or {}
-    allowed = {"cookies_path", "output_dir", "ffmpeg_location", "yt_dlp_path", "auto_organize"}
+    allowed = {
+        "cookies_path",
+        "output_dir",
+        "ffmpeg_location",
+        "yt_dlp_path",
+        "auto_organize",
+        "auto_repair_partial",
+        "partial_repair_attempts",
+    }
     patch = {key: data[key] for key in allowed if key in data}
+    if "partial_repair_attempts" in patch:
+        patch["partial_repair_attempts"] = get_partial_repair_attempts(patch)
     config = load_config()
     config.update(patch)
     save_config(config)

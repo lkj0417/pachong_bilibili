@@ -180,6 +180,8 @@ async function loadConfig() {
     form.ffmpeg_location.value = data.config.ffmpeg_location || "";
     form.yt_dlp_path.value = data.config.yt_dlp_path || "";
     form.auto_organize.checked = data.config.auto_organize !== false;
+    form.auto_repair_partial.checked = data.config.auto_repair_partial !== false;
+    form.partial_repair_attempts.value = data.config.partial_repair_attempts ?? 3;
   } catch (error) {
     console.error(error);
   }
@@ -502,6 +504,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ffmpeg_location: form.ffmpeg_location.value.trim(),
       yt_dlp_path: form.yt_dlp_path.value.trim(),
       auto_organize: form.auto_organize.checked,
+      auto_repair_partial: form.auto_repair_partial.checked,
+      partial_repair_attempts: parseInt(form.partial_repair_attempts.value, 10) || 0,
     };
     try {
       await api("/api/config", {
