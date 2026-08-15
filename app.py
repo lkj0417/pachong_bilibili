@@ -621,8 +621,8 @@ def describe_failed_items(task_id):
     return f"疑似失败分集：{', '.join(f'p{item}' for item in failed)}{suffix}"
 
 
-def _repair_partial_playlist(url, config, task_id, quality="best", download_playlist=False, concurrent_fragments=8):
-    if not bool(config.get("auto_repair_partial", True)):
+def _repair_partial_playlist(url, config, task_id, quality="best", download_playlist=False, concurrent_fragments=8, force=False):
+    if not force and not bool(config.get("auto_repair_partial", True)):
         append_task_log(task_id, "[auto-repair] 已关闭自动修复部分完成任务。")
         return False
 
@@ -648,6 +648,64 @@ def _repair_partial_playlist(url, config, task_id, quality="best", download_play
 
     append_task_log(task_id, f"[auto-repair] 自动修复失败：{describe_failed_items(task_id)}")
     return False
+
+
+def task_looks_like_playlist(task):
+    if task.get("download_playlist") is not None:
+        return bool(task.get("download_playlist"))
+    if is_playlist_url(task.get("url", "")):
+        return True
+    return any(PLAYLIST_ITEM_RE.search(line) for line in task.get("log", []))
+
+
+def _repair_task(task_id):
+    config = load_config()
+    with tasks_lock:
+        task = tasks.get(task_id)
+        if not task:
+            return
+        if task.get("repairing"):
+            return
+        task["repairing"] = True
+        task["status"] = "repairing"
+        task["progress"] = 0.0
+        task["message"] = "正在检测问题并修复…"
+        task["updated_at"] = now_iso()
+
+        url = task.get("url", "")
+        quality = task.get("quality") or "best"
+        download_playlist = task_looks_like_playlist(task)
+        concurrent_fragments = clamp_int(task.get("concurrent_fragments"), 8, 1, 32)
+
+    append_task_log(task_id, "[manual-repair] 用户手动触发：开始检测问题并修复。")
+    append_task_log(task_id, f"[manual-repair] {describe_failed_items(task_id)}")
+    try:
+        repaired = _repair_partial_playlist(
+            url,
+            config,
+            task_id,
+            quality,
+            download_playlist,
+            concurrent_fragments,
+            force=True,
+        )
+        if repaired:
+            downloaded = load_download_log()
+            if url:
+                downloaded.add(url)
+                save_download_log(downloaded)
+            update_task(task_id, "done", progress=100.0, message="检测并修复完成，状态已重置为完成")
+        else:
+            update_task(task_id, "partial", progress=99.0, message=f"检测并修复失败：{describe_failed_items(task_id)}")
+    except Exception as exc:
+        append_task_log(task_id, f"[manual-repair] 修复异常：{exc}")
+        update_task(task_id, "partial", progress=99.0, message=f"检测并修复异常：{exc}")
+    finally:
+        with tasks_lock:
+            task = tasks.get(task_id)
+            if task:
+                task["repairing"] = False
+                task["updated_at"] = now_iso()
 
 
 def _download_one(url, config, task_id, quality="best", download_playlist=False, concurrent_fragments=8, repair_attempt=0):
@@ -949,6 +1007,9 @@ def api_download():
                 "progress": 0.0,
                 "message": "等待下载",
                 "log": [],
+                "quality": quality,
+                "download_playlist": download_playlist,
+                "concurrent_fragments": concurrent_fragments,
                 "created_at": now_iso(),
                 "updated_at": now_iso(),
             }
@@ -969,6 +1030,21 @@ def api_tasks():
         data = list(tasks.values())
     data.sort(key=lambda item: item["created_at"])
     return jsonify({"tasks": data})
+
+
+@app.post("/api/tasks/<task_id>/repair")
+def api_task_repair(task_id):
+    with tasks_lock:
+        task = tasks.get(task_id)
+        if not task:
+            return jsonify({"ok": False, "message": "任务不存在或服务已重启，无法修复内存中的任务"}), 404
+        if task.get("repairing") or task.get("status") in {"running", "repairing"}:
+            return jsonify({"ok": False, "message": "任务正在运行或修复中"}), 409
+        if task.get("status") not in {"partial", "error", "skipped"}:
+            return jsonify({"ok": False, "message": "当前任务状态不需要修复"}), 400
+
+    threading.Thread(target=_repair_task, args=(task_id,), daemon=True).start()
+    return jsonify({"ok": True, "message": "已开始检测并修复，请稍后查看任务状态"})
 
 
 @app.post("/api/tasks/clear")

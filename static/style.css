@@ -371,6 +371,11 @@ button.ghost {
   color: var(--accent);
 }
 
+.badge.repairing {
+  background: rgba(139, 92, 246, 0.18);
+  color: var(--accent-2);
+}
+
 .badge.done {
   background: rgba(53, 199, 127, 0.18);
   color: var(--green);
@@ -1023,6 +1028,7 @@ button.ghost {
 }
 
 .task.running::before { background: var(--accent); }
+.task.repairing::before { background: var(--accent-2); }
 .task.done::before { background: var(--green); }
 .task.error::before { background: var(--red); }
 .task.skipped::before { background: var(--yellow); }
@@ -1053,6 +1059,7 @@ button.ghost {
 }
 
 .task.done .bar { background: linear-gradient(90deg, var(--green), #7ddf9d); }
+.task.repairing .bar { background: linear-gradient(90deg, var(--accent-2), var(--accent)); }
 .task.error .bar { background: linear-gradient(90deg, var(--red), #ff9b91); }
 .task.skipped .bar { background: linear-gradient(90deg, var(--yellow), #ffd37b); }
 .task.partial .bar { background: linear-gradient(90deg, var(--yellow), #ffd37b); }
@@ -1064,6 +1071,19 @@ button.ghost {
 
 .copy-log {
   border-radius: 10px;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.repair-task {
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
 }
 
 .files,

@@ -242,6 +242,7 @@ async function checkCookies() {
 const STATUS_TEXT = {
   pending: "等待",
   running: "下载中",
+  repairing: "修复中",
   done: "完成",
   partial: "部分完成",
   error: "失败",
@@ -284,6 +285,11 @@ function renderTasks(tasks) {
           </div>
           <div class="progress"><div class="bar" data-progress="${percent}"></div></div>
           <div class="task-msg">${escapeHtml(task.message || "")}</div>
+          ${
+            ["partial", "error"].includes(status)
+              ? `<div class="task-actions"><button type="button" class="repair-task" data-repair-id="${task.id}">检测并修复</button></div>`
+              : ""
+          }
           ${
             task.log && task.log.length
               ? `<div class="task-log-row"><details class="task-log" data-task-id="${task.id}" ${openTaskLogs.has(task.id) ? "open" : ""}><summary>查看日志</summary><pre>${escapeHtml(task.log.join("\n"))}</pre></details><button type="button" class="copy-log" data-copy-id="${task.id}">复制日志</button></div>`
@@ -332,6 +338,12 @@ function renderTasks(tasks) {
       setTimeout(() => {
         button.textContent = "复制日志";
       }, 1200);
+    });
+  });
+
+  container.querySelectorAll(".repair-task").forEach((button) => {
+    button.addEventListener("click", async () => {
+      await repairTask(button.dataset.repairId, button);
     });
   });
 }
@@ -478,6 +490,21 @@ async function clearTasks() {
     await loadTasks();
   } catch (error) {
     alert(error.message);
+  }
+}
+
+async function repairTask(taskId, button) {
+  if (!taskId) return;
+  const originalText = button.textContent;
+  button.disabled = true;
+  button.textContent = "修复中…";
+  try {
+    await api(`/api/tasks/${taskId}/repair`, { method: "POST", body: "{}" });
+    await loadTasks();
+  } catch (error) {
+    alert(error.message);
+    button.disabled = false;
+    button.textContent = originalText;
   }
 }
 
