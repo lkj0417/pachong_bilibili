@@ -1,9 +1,11 @@
 {
   "cookies_path": "cookies.txt",
-  "output_dir": "C:\\Users\\lkj04\\Desktop\\project\\pachong\\pachong_bilibili",
+  "output_dir": ".",
   "ffmpeg_location": "../ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe",
   "yt_dlp_path": "",
   "auto_organize": true,
+  "auto_repair_partial": true,
+  "partial_repair_attempts": 3,
   "ffmpeg_release_name": "ffmpeg-master-latest-win64-gpl.zip",
   "ffmpeg_release_updated_at": "2026-08-14T13:39:55Z"
 }
