@@ -9,6 +9,18 @@ function selectionInTasks() {
   return Boolean(container && selection.anchorNode && container.contains(selection.anchorNode));
 }
 
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  localStorage.setItem("theme", theme);
+}
+
+function initTheme() {
+  const saved = localStorage.getItem("theme") || "dark";
+  const select = $("#theme-select");
+  if (select) select.value = saved;
+  applyTheme(saved);
+}
+
 async function api(path, options = {}) {
   const response = await fetch(path, {
     headers: { "Content-Type": "application/json" },
@@ -354,6 +366,12 @@ async function clearTasks() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+
+  $("#theme-select").addEventListener("change", (event) => {
+    applyTheme(event.target.value);
+  });
+
   loadHealth();
   loadConfig();
   loadTasks();
