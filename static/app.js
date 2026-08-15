@@ -277,11 +277,15 @@ function renderTasks(tasks) {
     .map((task) => {
       const status = task.status || "pending";
       const percent = Math.round(Number(task.progress) || 0);
+      const displayTitle = task.display_title || task.playlist_title || task.video_title || "正在解析标题…";
       return `
         <div class="task ${status}">
           <div class="task-head">
             <span class="badge ${status}">${STATUS_TEXT[status] || status}</span>
-            <span class="task-url" title="${escapeHtml(task.url)}">${escapeHtml(task.url)}</span>
+            <div class="task-identity">
+              <span class="task-title" title="${escapeHtml(displayTitle)}">${escapeHtml(displayTitle)}</span>
+              <span class="task-url" title="${escapeHtml(task.url)}">${escapeHtml(task.url)}</span>
+            </div>
           </div>
           <div class="progress"><div class="bar" data-progress="${percent}"></div></div>
           <div class="task-msg">${escapeHtml(task.message || "")}</div>

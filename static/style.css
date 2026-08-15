@@ -404,6 +404,27 @@ button.ghost {
   color: var(--text);
 }
 
+.task-identity {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.task-title {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-identity .task-url {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .progress {
   height: 6px;
   border-radius: 999px;

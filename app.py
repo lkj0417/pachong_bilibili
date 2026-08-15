@@ -39,6 +39,7 @@ DEFAULT_CONFIG = {
 
 PROGRESS_RE = re.compile(r"\[download\]\s+(\d+(?:\.\d+)?)%")
 PLAYLIST_ITEM_RE = re.compile(r"\[download\]\s+Downloading item\s+(\d+)\s+of\s+(\d+)", re.IGNORECASE)
+TITLE_META_PREFIX = "__PACHONG_TITLE__\t"
 COOKIE_KEYS = ["SESSDATA", "bili_jct", "DedeUserID"]
 DEFAULT_COOKIE_TEST_URL = "https://www.bilibili.com/video/BV1xx411c7mD"
 QUALITY_FORMATS = {
@@ -582,6 +583,35 @@ def append_task_log(task_id, line):
             del task["log"][: len(task["log"]) - 500]
 
 
+def update_task_title(task_id, playlist_title="", video_title=""):
+    playlist_title = (playlist_title or "").strip()
+    video_title = (video_title or "").strip()
+    display_title = playlist_title or video_title
+    if not display_title:
+        return
+    with tasks_lock:
+        task = tasks.get(task_id)
+        if not task:
+            return
+        if playlist_title:
+            task["playlist_title"] = playlist_title
+        if video_title:
+            task["video_title"] = video_title
+        task["display_title"] = display_title
+        task["title_source"] = "playlist" if playlist_title else "video"
+        task["updated_at"] = now_iso()
+
+
+def parse_title_meta_line(line):
+    if not line.startswith(TITLE_META_PREFIX):
+        return None
+    payload = line[len(TITLE_META_PREFIX) :]
+    parts = payload.split("\t", 1)
+    if len(parts) == 1:
+        parts.append("")
+    return {"playlist_title": parts[0].strip(), "video_title": parts[1].strip()}
+
+
 def get_task_log_lines(task_id):
     with tasks_lock:
         return list(tasks.get(task_id, {}).get("log", []))
@@ -739,6 +769,8 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
             "5",
             "--socket-timeout",
             "30",
+            "--print",
+            f"before_dl:{TITLE_META_PREFIX}%(playlist_title|)s\t%(title)s",
             "-f",
             format_spec,
             "--merge-output-format",
@@ -777,6 +809,10 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
 
     for raw in proc.stdout:
         line = raw.rstrip()
+        title_meta = parse_title_meta_line(line)
+        if title_meta:
+            update_task_title(task_id, title_meta["playlist_title"], title_meta["video_title"])
+            continue
         append_task_log(task_id, line)
         match = PROGRESS_RE.search(line)
         if match:
@@ -1007,6 +1043,10 @@ def api_download():
                 "progress": 0.0,
                 "message": "等待下载",
                 "log": [],
+                "display_title": "",
+                "playlist_title": "",
+                "video_title": "",
+                "title_source": "",
                 "quality": quality,
                 "download_playlist": download_playlist,
                 "concurrent_fragments": concurrent_fragments,
