@@ -612,6 +612,13 @@ def parse_title_meta_line(line):
     return {"playlist_title": parts[0].strip(), "video_title": parts[1].strip()}
 
 
+def update_playlist_progress(task_id, current_item, total_items, item_percent=0.0):
+    if not current_item or not total_items:
+        return
+    overall = ((max(1, current_item) - 1) + max(0.0, min(100.0, item_percent)) / 100.0) / total_items * 100.0
+    update_task(task_id, progress=overall)
+
+
 def get_task_log_lines(task_id):
     with tasks_lock:
         return list(tasks.get(task_id, {}).get("log", []))
@@ -747,6 +754,8 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
     cmd = [
         yt_dlp,
         "--newline",
+        "--progress",
+        "--no-quiet",
         "--windows-filenames",
         "--encoding",
         "utf-8",
@@ -793,6 +802,7 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
 
     prefix = f"自动修复第 {repair_attempt} 次：" if repair_attempt else ""
     update_task(task_id, message=f"{prefix}{' '.join(cmd)}")
+    append_task_log(task_id, f"[command] {prefix}{' '.join(cmd)}")
     try:
         proc = subprocess.Popen(
             cmd,
@@ -807,16 +817,32 @@ def _download_one(url, config, task_id, quality="best", download_playlist=False,
         update_task(task_id, message="找不到 yt-dlp，请检查配置或 yt-dlp.exe")
         return False
 
+    current_item = None
+    total_items = None
     for raw in proc.stdout:
         line = raw.rstrip()
         title_meta = parse_title_meta_line(line)
         if title_meta:
             update_task_title(task_id, title_meta["playlist_title"], title_meta["video_title"])
+            shown_title = title_meta["playlist_title"] or title_meta["video_title"]
+            append_task_log(task_id, f"[title] {shown_title}")
             continue
         append_task_log(task_id, line)
+        item_match = PLAYLIST_ITEM_RE.search(line)
+        if item_match:
+            current_item = int(item_match.group(1))
+            total_items = int(item_match.group(2))
+            update_playlist_progress(task_id, current_item, total_items, 0.0)
+            update_task(task_id, message=line)
+            continue
         match = PROGRESS_RE.search(line)
         if match:
-            update_task(task_id, progress=float(match.group(1)), message=line)
+            item_percent = float(match.group(1))
+            if current_item and total_items:
+                update_playlist_progress(task_id, current_item, total_items, item_percent)
+                update_task(task_id, message=line)
+            else:
+                update_task(task_id, progress=item_percent, message=line)
         else:
             update_task(task_id, message=line)
 

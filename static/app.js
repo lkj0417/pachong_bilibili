@@ -278,6 +278,8 @@ function renderTasks(tasks) {
       const status = task.status || "pending";
       const percent = Math.round(Number(task.progress) || 0);
       const displayTitle = task.display_title || task.playlist_title || task.video_title || "正在解析标题…";
+      const logText = task.log && task.log.length ? escapeHtml(task.log.join("\n")) : "等待 yt-dlp 输出日志…";
+      const shouldShowLog = ["pending", "running", "repairing", "partial", "error", "done", "skipped"].includes(status);
       return `
         <div class="task ${status}">
           <div class="task-head">
@@ -295,8 +297,8 @@ function renderTasks(tasks) {
               : ""
           }
           ${
-            task.log && task.log.length
-              ? `<div class="task-log-row"><details class="task-log" data-task-id="${task.id}" ${openTaskLogs.has(task.id) ? "open" : ""}><summary>查看日志</summary><pre>${escapeHtml(task.log.join("\n"))}</pre></details><button type="button" class="copy-log" data-copy-id="${task.id}">复制日志</button></div>`
+            shouldShowLog
+              ? `<div class="task-log-row"><details class="task-log" data-task-id="${task.id}" ${openTaskLogs.has(task.id) ? "open" : ""}><summary>查看日志</summary><pre>${logText}</pre></details><button type="button" class="copy-log" data-copy-id="${task.id}" ${task.log && task.log.length ? "" : "disabled"}>复制日志</button></div>`
               : ""
           }
         </div>
