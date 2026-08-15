@@ -55,6 +55,11 @@ function setPill(id, ok, text) {
   el.className = `pill ${ok ? "ok" : "bad"}`;
 }
 
+function setTextIfExists(selector, text) {
+  const el = $(selector);
+  if (el) el.textContent = text;
+}
+
 async function loadHealth() {
   try {
     const data = await api("/api/health");
@@ -156,10 +161,12 @@ function renderTasks(tasks) {
   if (!tasks.length) {
     container.innerHTML = '<div class="empty">暂无任务</div>';
     count.textContent = "";
+    setTextIfExists("#task-summary", "0");
     return;
   }
 
   count.textContent = `${tasks.length} 个任务`;
+  setTextIfExists("#task-summary", String(tasks.length));
   container.innerHTML = tasks
     .slice()
     .reverse()
@@ -167,12 +174,12 @@ function renderTasks(tasks) {
       const status = task.status || "pending";
       const percent = Math.round(Number(task.progress) || 0);
       return `
-        <div class="task">
+        <div class="task ${status}">
           <div class="task-head">
             <span class="badge ${status}">${STATUS_TEXT[status] || status}</span>
             <span class="task-url" title="${escapeHtml(task.url)}">${escapeHtml(task.url)}</span>
           </div>
-          <div class="progress"><div class="bar" style="width:${percent}%"></div></div>
+          <div class="progress"><div class="bar" data-progress="${percent}"></div></div>
           <div class="task-msg">${escapeHtml(task.message || "")}</div>
           ${
             task.log && task.log.length
@@ -183,6 +190,10 @@ function renderTasks(tasks) {
       `;
     })
     .join("");
+
+  container.querySelectorAll(".bar[data-progress]").forEach((bar) => {
+    bar.style.width = `${bar.dataset.progress}%`;
+  });
 
   container.querySelectorAll("details.task-log").forEach((details) => {
     const pre = details.querySelector("pre");
@@ -240,6 +251,7 @@ const KIND_TEXT = {
 
 function renderFiles(files) {
   const container = $("#files");
+  setTextIfExists("#file-summary", String(files.length));
   if (!files.length) {
     container.innerHTML = '<div class="empty">暂无文件</div>';
     return;
@@ -272,6 +284,7 @@ async function loadLog() {
     const data = await api("/api/log");
     const container = $("#log");
     $("#log-count").textContent = data.count ? `${data.count} 条` : "";
+    setTextIfExists("#log-summary", String(data.count || 0));
     if (!data.entries.length) {
       container.innerHTML = '<div class="empty">暂无下载记录</div>';
       return;
@@ -393,13 +406,15 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         body: JSON.stringify(payload),
       });
-      $("#config-msg").textContent = "配置已保存";
-      $("#config-msg").style.color = "var(--green)";
+      const message = $("#config-msg");
+      message.textContent = "配置已保存";
+      message.style.color = "var(--green)";
       await loadHealth();
       await loadFiles();
     } catch (error) {
-      $("#config-msg").textContent = error.message;
-      $("#config-msg").style.color = "var(--red)";
+      const message = $("#config-msg");
+      message.textContent = error.message;
+      message.style.color = "var(--red)";
     }
   });
 

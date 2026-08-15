@@ -4,29 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bilibili 爬虫控制台</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">🎬 Bilibili 爬虫控制台</div>
-    <div class="theme-switch">
-      <label for="theme-select">主题</label>
-      <select id="theme-select">
-        <option value="dark">暗色</option>
-        <option value="light">亮色</option>
-        <option value="sky">天蓝</option>
-      </select>
+    <div class="brand">
+      <span class="brand-logo">▶</span>
+      <span>
+        <strong>Bilibili 爬虫控制台</strong>
+        <small>视频下载 · 文件整理 · 音视频合并</small>
+      </span>
     </div>
-    <div class="health" id="health">
-      <span class="pill" id="yt-dlp-status">yt-dlp: 检测中…</span>
-      <span class="pill" id="cookies-status">cookies: 检测中…</span>
-      <span class="pill" id="ffmpeg-status">ffmpeg: 检测中…</span>
+    <div class="topbar-actions">
+      <div class="theme-switch">
+        <label for="theme-select">主题</label>
+        <select id="theme-select">
+          <option value="dark">暗色</option>
+          <option value="light">亮色</option>
+          <option value="sky">天蓝</option>
+        </select>
+      </div>
+      <div class="health" id="health" aria-label="环境状态">
+        <span class="pill" id="yt-dlp-status">yt-dlp: 检测中…</span>
+        <span class="pill" id="cookies-status">cookies: 检测中…</span>
+        <span class="pill" id="ffmpeg-status">ffmpeg: 检测中…</span>
+      </div>
     </div>
   </header>
 
   <main class="layout">
     <aside class="panel config-panel">
-      <h2>⚙️ 配置</h2>
+      <div class="panel-title">
+        <span class="section-icon">⚙️</span>
+        <div>
+          <h2>配置中心</h2>
+          <p>保存下载环境与输出规则</p>
+        </div>
+      </div>
       <form id="config-form">
         <label>cookies 文件
           <input name="cookies_path" placeholder="cookies.txt">
@@ -68,9 +82,43 @@
     </aside>
 
     <section class="content">
+      <section class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow">Bilibili Toolkit</span>
+          <h1>更轻松地批量下载与管理课程视频</h1>
+          <p>粘贴链接、选择画质、自动整理，当前任务与下载记录会实时刷新。</p>
+        </div>
+        <div class="hero-stats" aria-label="下载概览">
+          <div class="stat-card">
+            <span class="stat-label">任务</span>
+            <strong id="task-summary">0</strong>
+            <small>实时队列</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">文件</span>
+            <strong id="file-summary">0</strong>
+            <small>输出目录</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">日志</span>
+            <strong id="log-summary">0</strong>
+            <small>下载记录</small>
+          </div>
+        </div>
+      </section>
+
       <div class="panel download-panel">
-        <h2>📥 下载视频</h2>
-        <textarea id="urls" rows="5" placeholder="每行一个 Bilibili 视频 URL"></textarea>
+        <div class="panel-title compact">
+          <span class="section-icon">📥</span>
+          <div>
+            <h2>下载视频</h2>
+            <p>每行填写一个链接，支持单视频、分 P、合集与课程</p>
+          </div>
+        </div>
+        <label class="download-url-field" for="urls">
+          视频链接
+          <textarea id="urls" rows="5" placeholder="每行一个 Bilibili 视频 URL"></textarea>
+        </label>
         <div class="quality-row">
           <label for="quality">下载画质</label>
           <select id="quality">
@@ -102,7 +150,13 @@
 
       <div class="panel tasks-panel">
         <div class="panel-head">
-          <h2>📋 任务</h2>
+          <div class="panel-title compact">
+            <span class="section-icon">📋</span>
+            <div>
+              <h2>任务队列</h2>
+              <p>自动轮询最新进度</p>
+            </div>
+          </div>
           <span id="task-count"></span>
         </div>
         <div id="tasks" class="tasks"></div>
@@ -111,14 +165,26 @@
       <div class="two-col">
         <div class="panel files-panel">
           <div class="panel-head">
-            <h2>📁 文件</h2>
+            <div class="panel-title compact">
+              <span class="section-icon">📁</span>
+              <div>
+                <h2>文件</h2>
+                <p>已识别的视频、音频与文本</p>
+              </div>
+            </div>
             <button id="refresh-files-2" class="ghost">刷新</button>
           </div>
           <div id="files" class="files"></div>
         </div>
         <div class="panel log-panel">
           <div class="panel-head">
-            <h2>🗒️ 下载日志</h2>
+            <div class="panel-title compact">
+              <span class="section-icon">🗒️</span>
+              <div>
+                <h2>下载日志</h2>
+                <p>历史下载链接</p>
+              </div>
+            </div>
             <span id="log-count"></span>
           </div>
           <div id="log" class="log"></div>
@@ -127,6 +193,6 @@
     </section>
   </main>
 
-  <script src="/static/app.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
